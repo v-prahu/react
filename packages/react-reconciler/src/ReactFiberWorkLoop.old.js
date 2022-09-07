@@ -3184,7 +3184,7 @@ function doubleInvokeEffectsInDEV(
 ) {
   const isStrictModeFiber = fiber.type === REACT_STRICT_MODE_TYPE;
   const isInStrictMode = parentIsInStrictMode || isStrictModeFiber;
-  if (fiber.flags & PlacementDEV || fiber.tag === OffscreenComponent) {
+  if (fiber.flags & PlacementDEV) {
     setCurrentDebugFiberInDEV(fiber);
     if (isInStrictMode) {
       disappearLayoutEffects(fiber);
